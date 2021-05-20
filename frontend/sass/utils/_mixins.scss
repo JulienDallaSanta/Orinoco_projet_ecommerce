@@ -1,0 +1,17 @@
+@mixin mobile-only{
+    @media screen and (max-width: map-get($breakpoints , mobile )){
+        @content;
+    }
+}
+@mixin btn-neumorphic-palette($colour){
+    background: $colour;
+    box-shadow:  6px 6px 22px darken($colour, 10%),
+             -6px -6px 22px lighten($colour, 10%);
+}
+
+@mixin round-btn{
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
