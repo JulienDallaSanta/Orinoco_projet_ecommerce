@@ -1,0 +1,22 @@
+{
+  "name": "projet_site_ecommerce",
+  "version": "1.0.0",
+  "description": "Site ecommerce javascript frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienDallaSanta/Orinoco_projet_ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienDallaSanta/Orinoco_projet_ecommerce/issues"
+  },
+  "homepage": "https://github.com/JulienDallaSanta/Orinoco_projet_ecommerce#readme",
+  "browserslist": "last 4 versions"
+}
