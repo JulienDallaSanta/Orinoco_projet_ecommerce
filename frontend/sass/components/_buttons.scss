@@ -1,0 +1,17 @@
+.btn{
+    &__neumorphic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 50%;
+        box-shadow:  6px 6px 22px #d0be8b,
+                 -6px -6px 22px #ffffbb;
+        @each $item, $colour in map-get($items-colours, teddies) {
+            &--teddies-#{$item}{
+                @include btn-neumorphic-palette($colour);
+            }
+        }
+    }
+}
