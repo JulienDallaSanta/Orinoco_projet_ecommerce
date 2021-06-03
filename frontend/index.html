@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <!--style-->
+        <!-- TODO: ADD PREFIX CSS
+            <link rel="stylesheet" type="text/css" href="public/css/prefixed/style.css"> -->
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
         <!--favicon-->
         <link rel="shortcut icon" type="img/png" href="public/img/favicon.png"/>
@@ -21,11 +23,15 @@
     </head>
 
     <body>
-        <header class="header">
-            <img src="public/img/orinoco_logo.png" alt="logo Orinoco" class="header__logo">
-            <div id="searchbar" class="btn__neumorphic btn__neumorphic--search">
+        <div class="search-bar">
+            <input type="text" class="search-bar__input" placeholder="Vous cherchez...">
+            <div class="btn__neumorphic btn__neumorphic--search">
                 <i class="fas fa-search"></i>
             </div>
+        </div>
+
+        <header class="header">
+            <img src="public/img/orinoco_logo.png" alt="logo Orinoco" class="header__logo">
             <div class="header__cart">
                 <span class="header__cart__amount">285.00€</span>
                 <div class="btn__neumorphic btn__neumorphic--cart">
@@ -38,9 +44,9 @@
         <section class="hero">
             <div class="hero__bkg"></div>
             <div class="hero__products-container">
-                <div class="hero__products hero__products--teddies">
+                <div class="hero__products hero__products--teddies hero__products--active">
                     <h2 class="hero__products__h2">Ours en peluche</h2>
-                    <img class="hero__products__img hero__products__img--teddies" src="public/img/teddy_1.jpg" alt="Ours en peluche">
+                    <img class="hero__products__img hero__products__img--teddies" src="public/img/teddy_1.png" alt="Ours en peluche">
                     <div class="hero__products__triangle"></div>
                 </div>
                 <div class="hero__products hero__products--oak">
@@ -55,6 +61,88 @@
                 </div>
             </div>
             <h1>Chez Orinoco, nous trouvons pour vous les meilleurs produits vintage.</h1>
+        </section>
+
+        <section class="products-gallery products-gallery--teddies">
+            <div class="products-gallery__product products-gallery__product--teddy1">
+                <div class="products-gallery__product__header">
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item1">
+                        <i class="btn__neumorphic--product-header__i fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item1">
+                        <i class="btn__neumorphic--product-header__i fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <img src="public/img/teddy_1.png" alt="ours en peluche 1" class="products-gallery__product__img">
+                <span class="products-gallery__product__name">Teddy 1</span>
+                <span class="products-gallery__product__price">18.95<sup>€</sup></span>
+                <div class="products-gallery__product__bkg-color products-gallery__product__bkg-color--teddies-item1"></div>
+                <span class="products-gallery__product__bkg-text">Orinoco</span>
+            </div>
+
+            <div class="products-gallery__product products-gallery__product--teddy2">
+                <div class="products-gallery__product__header">
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item2">
+                        <i class="btn__neumorphic--product-header__i fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item2">
+                        <i class="btn__neumorphic--product-header__i fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <img src="public/img/teddy_2.png" alt="ours en peluche 2" class="products-gallery__product__img">
+                <span class="products-gallery__product__name">Teddy 2</span>
+                <span class="products-gallery__product__price">14.95<sup>€</sup></span>
+                <div class="products-gallery__product__bkg-color products-gallery__product__bkg-color--teddies-item2"></div>
+                <span class="products-gallery__product__bkg-text">Orinoco</span>
+            </div>
+
+            <div class="products-gallery__product products-gallery__product--teddy3">
+                <div class="products-gallery__product__header">
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item3">
+                        <i class="btn__neumorphic--product-header__i fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item3">
+                        <i class="btn__neumorphic--product-header__i fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <img src="public/img/teddy_3.png" alt="ours en peluche 3" class="products-gallery__product__img">
+                <span class="products-gallery__product__name">Teddy 3</span>
+                <span class="products-gallery__product__price">27.95<sup>€</sup></span>
+                <div class="products-gallery__product__bkg-color products-gallery__product__bkg-color--teddies-item3"></div>
+                <span class="products-gallery__product__bkg-text">Orinoco</span>
+            </div>
+
+            <div class="products-gallery__product products-gallery__product--teddy4">
+                <div class="products-gallery__product__header">
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item4">
+                        <i class="btn__neumorphic--product-header__i fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item4">
+                        <i class="btn__neumorphic--product-header__i fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <img src="public/img/teddy_4.png" alt="ours en peluche 4" class="products-gallery__product__img">
+                <span class="products-gallery__product__name">Teddy 4</span>
+                <span class="products-gallery__product__price">17.95<sup>€</sup></span>
+                <div class="products-gallery__product__bkg-color products-gallery__product__bkg-color--teddies-item4"></div>
+                <span class="products-gallery__product__bkg-text">Orinoco</span>
+            </div>
+
+            <div class="products-gallery__product products-gallery__product--teddy5">
+                <div class="products-gallery__product__header">
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item5">
+                        <i class="btn__neumorphic--product-header__i fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="btn__neumorphic btn__neumorphic--product-header btn__neumorphic--teddies-item5">
+                        <i class="btn__neumorphic--product-header__i fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <img src="public/img/teddy_5.png" alt="ours en peluche 5" class="products-gallery__product__img">
+                <span class="products-gallery__product__name">Teddy 5</span>
+                <span class="products-gallery__product__price">16.95<sup>€</sup></span>
+                <div class="products-gallery__product__bkg-color products-gallery__product__bkg-color--teddies-item5"></div>
+                <span class="products-gallery__product__bkg-text">Orinoco</span>
+            </div>
         </section>
 
         <footer>
