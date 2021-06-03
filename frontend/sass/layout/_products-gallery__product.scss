@@ -1,0 +1,15 @@
+.products-gallery__product, .products-gallery--products-page__product{
+    width: map-get($widths, mobile, products_gallery_product);
+    height: map-get($heights, mobile, products_gallery_product);
+    border-radius: 3vh;
+    box-shadow: 0 0 3vw 0 rgba(0, 0, 0, 0.2);
+    margin-top: 5vw;
+    @include flex(column, nowrap, space-around, center);
+    position: relative;
+    overflow: hidden;
+    padding: 1vw;
+}
+.products-gallery--products-page__product{
+    width: 18%;
+    height: 25vw;
+}

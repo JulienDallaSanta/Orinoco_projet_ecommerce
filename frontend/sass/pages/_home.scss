@@ -1,0 +1,58 @@
+.hero{
+    width: 95%;
+    margin-top: 9vh;
+    @include mobile-only {
+        margin-top: 5vh;
+    }
+    @include flex(column, wrap, space-between, center);
+    &__bkg{
+        width: 95%;
+        border-radius: 3vh;
+        background-image: url(../img/background.jpg);
+        background-size: cover;
+        background-position: 0% 65%;
+        height: map-get($heights, screen, hero_bkg);
+        position: absolute;
+        top: 15vh;
+        left: 2.5%;
+        z-index: -1;
+        @include mobile-only {
+            display: none;
+        }
+    }
+    &__products-container{
+        @include flex(row, nowrap, space-between, flex-start);
+        width: map-get($widths, screen, hero_products-container);
+        @include mobile-only {
+            @include flex(column, nowrap, space-between, flex-start);
+        }
+    }
+    & h1{
+        font-size: 3rem;
+        font-weight:bold;
+        color: $colour-primary;
+        margin-top: 15vh;
+        @include mobile-only {
+            display: none;
+        }
+    }
+}
+
+.products-gallery{
+    display:none;
+    @include mobile-only {
+        margin-top: 15%;
+        width: map-get($widths, mobile, products_gallery);
+        @include flex(row, wrap, space-between, flex-start);
+    }
+    &--products-page{
+        margin-top: 3rem;
+        @include flex(row, wrap, space-between, flex-start);
+        width: 95%;
+        &__similar-products{
+            width: 95%;
+            color: $colour-primary;
+            font-size: 1.5rem;
+        }
+    }
+}

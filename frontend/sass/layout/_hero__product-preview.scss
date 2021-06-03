@@ -1,0 +1,100 @@
+.hero__product-preview{
+    position: relative;
+    @include flex(row, nowrap, flex-start, flex-start);
+    background-color: rgba(0,0,0, 0.5);
+    box-shadow: 0 0 3vw 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 3vh;
+    padding: 2.5%;
+    width: 95%;
+    &__product{
+        position: relative;
+        overflow: hidden;
+        @include flex(column, wrap, space-between, center);
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 2vw;
+        color: $colour-white;
+        padding: 1.5%;
+        &__img{
+            height: 20vw;
+        }
+        &__price{
+            font-size: 2rem;
+            font-weight: normal;
+        }
+        &__bkg-color{
+            @include bkg-color(30vw, -65%, -65%);
+        }
+        &__bkg-text{
+            @include bkg-text(-15%, 7rem);
+        }
+    }
+    &__data{
+        @include flex(column, wrap, space-between, flex-start);
+        margin-left: 3vw;
+        color: $colour-white;
+        &__name{
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+        &__description{
+            & p{
+                margin: 0 0 1rem 0 ;
+            }
+        }
+        &__avis{
+            @include flex(row, nowrap, space-between, flex-start);
+            margin: 2rem 0 3rem 0;
+            & span, & i{
+                margin: 0 .5rem 0 0;
+            }
+            & i{
+                color: $colour-darkgrey;
+	            cursor: pointer;
+                &.gold {
+                    color: $colour-yellow;
+                }
+            }
+            &:hover i{
+                color: $colour-yellow;
+                transition: .5s;
+            }
+            & i:hover~i{
+                color: $colour-darkgrey;
+                transition: .5s;
+            }
+        }
+        &__options{
+            &__line1{
+                margin-bottom: 1rem;
+                @include flex(row, nowrap, space-between, flex-start);
+                &__span {
+                    margin-right: 1rem;
+                }
+            }
+            &__line2{
+                @include flex(row, nowrap, space-between, flex-start);
+                width: 8rem;
+                &__color {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    &:nth-child(1){
+                        background-color: map-get($items-options, teddies, teddy1, color1);
+                    }
+                    &:nth-child(2){
+                        background-color: map-get($items-options, teddies, teddy1, color2);
+                    }
+                    &:nth-child(3){
+                        background-color: map-get($items-options, teddies, teddy1, color3);
+                    }
+                }
+            }
+        }
+    }
+    &__btn__add-to-cart{
+        position: absolute;
+        right: 2.5%;
+        bottom: 5%;
+    }
+}

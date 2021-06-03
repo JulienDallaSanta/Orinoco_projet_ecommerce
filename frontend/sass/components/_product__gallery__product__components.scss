@@ -1,0 +1,39 @@
+.products-gallery__product, .products-gallery--products-page__product{
+    &__header{
+        width:85%;
+        color: $colour-white;
+        @include flex(row, nowrap, space-between, flex-start);
+    }
+    &__img{
+        height: 50%;
+    }
+    &__name{
+        font-weight: bold;
+    }
+    &__name, &__price{
+        @include mobile-only {
+            color: $colour-primary;
+        }
+    }
+    &__bkg-color{
+        @include bkg-color(90vw,-100%, -100%);
+    }
+    &__bkg-text{
+        @include bkg-text(-24%, 6rem);
+    }
+}
+.products-gallery--products-page__product{
+    background-color: #3D3728;
+    color: $colour-white;
+    &__bkg-color{
+        @include bkg-color(30vw,-75%, -70%);
+        z-index: 0;
+    }
+    &__bkg-text{
+        @include bkg-text(-24%, 8rem);
+        z-index: 0;
+    }
+    &__header, &__img, &__name, &__price{
+        z-index: 1;
+    }
+}
