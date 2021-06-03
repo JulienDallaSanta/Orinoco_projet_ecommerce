@@ -1,6 +1,8 @@
-$colour-lightorange: #f5dfa3;
-$colour-darkorange: #e48910;
-$colour-white: #fff;
+$colour-secondary: #f5dfa3;
+$colour-primary: #e48910;
+$colour-yellow: #FFDC0F;
+$colour-white: #ffffff;
+$colour-black: #000000;
 $colour-darkgrey: rgba(255,255,255,0.3);
 
 $breakpoints:(
@@ -31,4 +33,37 @@ $items-colours:(
         item4:#354459,
         item5:#674b47,
     ),
+);
+
+$items-options:(
+    teddies:(
+        teddy1:(
+            color1: #80521d,
+            color2: #f5dfa3,
+            color3: #c98d49,
+        ),
+    ),
+
+);
+
+$widths:(
+    mobile:(
+        products_gallery: 95%,
+        products_gallery_product: 45%,
+    ),
+    screen:(
+        hero_products-container: 90%,
+        hero_products:20vw,
+    )
+);
+
+$heights:(
+    mobile:(
+        products_gallery: 126vw,
+        products_gallery_product: 60vw,
+    ),
+    screen:(
+        hero_bkg: 20vw,
+        hero_products_img: 15vw,
+    )
 );
