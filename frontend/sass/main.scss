@@ -7,12 +7,17 @@
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/hero__products";
+@import "./components/product__gallery__product__components";
 
 @import "./layout/header";
+@import "./layout/search-bar";
 @import "./layout/container";
 @import "./layout/form";
+@import "./layout/footer";
+@import "./layout/products-gallery__product";
+@import "./layout/hero__product-preview";
 
 @import "./pages/home";
-@import "./pages/product";
 @import "./pages/cart";
 @import "./pages/summary";
