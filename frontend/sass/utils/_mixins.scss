@@ -7,11 +7,49 @@
     background: $colour;
     box-shadow:  6px 6px 22px darken($colour, 10%),
              -6px -6px 22px lighten($colour, 10%);
+    @include mobile-only {
+        box-shadow:  3px 3px 11px darken($colour, 10%),
+             -3px -3px 11px lighten($colour, 10%);
+    }
 }
 
 @mixin round-btn{
     border-radius:50%;
+    @include flex(row, wrap, center, center);
+}
+
+@mixin flex($direction, $wrap, $justify, $align){
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content:$justify;
+    align-items:$align;
+}
+
+@mixin bkg-color($radius, $top, $right){
+    width:$radius;
+    height:$radius;
+    border-radius:50%;
+    @each $item, $colour in map-get($items-colours, teddies) {
+        &--teddies-#{$item}{
+            background: $colour;
+        }
+    }
+    position: absolute;
+    top: $top;
+    right: $right;
+    z-index: -1;
+}
+
+@mixin bkg-text($left, $font-size){
+    position: absolute;
+    bottom: 0;
+    left: $left;
+    font-weight: 1000;
+    font-size: $font-size;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.3);
+    @include mobile-only {
+        color: darken($colour-white, 10%);
+    }
 }
