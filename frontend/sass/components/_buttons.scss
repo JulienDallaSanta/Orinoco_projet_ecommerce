@@ -1,17 +1,62 @@
 .btn{
     &__neumorphic{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2vw;
-        height: 2vw;
+        @include flex(row, nowrap, center, center);
         border-radius: 50%;
         box-shadow:  6px 6px 22px #d0be8b,
                  -6px -6px 22px #ffffbb;
+        padding: 10px;
+        @include mobile-only {
+            &--cart, &--search{
+                box-shadow:  5px 5px 10px #d9d9d9,
+                 -5px -5px 10px #ffffff;
+            }
+        }
         @each $item, $colour in map-get($items-colours, teddies) {
             &--teddies-#{$item}{
                 @include btn-neumorphic-palette($colour);
             }
+        }
+        &--product-header{
+            padding: 7px;
+            &__i{
+                @include mobile-only {
+                    font-size: .7rem;
+                }
+
+                color: $colour-secondary;
+            }
+        }
+    }
+    &__quantity{
+        @include flex(row, nowrap,space-around, flex-start);
+        width: 4rem;
+        background-color: rgba(0,0,0, 0.5);
+        color: $colour-white;
+        padding: 0.2rem 0;
+        border: none;
+        border-radius: 15%;
+        box-shadow: none;
+        & span{
+            margin-right: 0;
+        }
+        &__value{
+            border: solid 1px $colour-white;
+            border-radius:25%;
+            padding: 2px 4px;
+        }
+    }
+    &__add-to-cart{
+        @include flex(row, nowrap, space-between, center);
+        width: 10rem;
+        height: 2rem;
+        border-radius: 15%;
+        color: $colour-white;
+        background-color:$colour-primary;
+        padding: .5% 1%;
+        box-shadow: none;
+        border: none;
+        & span{
+            margin-right: 2%;
         }
     }
 }
