@@ -16,10 +16,11 @@
         border-radius: 15%;
         position: relative;
         padding: 2% 5%;
+        color: $colour-primary;
         &--active{
             background: $colour-primary;
-            &__h2{
-                color: $colour-white;
+            & h2{
+                color: $colour-secondary;
             }
         }
     }
