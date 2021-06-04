@@ -26,6 +26,13 @@
         @include mobile-only {
             @include flex(column, nowrap, space-between, flex-start);
         }
+        &.mobile{
+            display:none;
+            @include mobile-only {
+                display: flex;
+                margin-bottom: 3rem;
+            }
+        }
     }
     & h1{
         font-size: 3rem;
